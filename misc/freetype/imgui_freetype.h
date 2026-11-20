@@ -1,6 +1,5 @@
-// dear imgui: FreeType font builder
+// dear imgui: FreeType font builder (used as a replacement for the stb_truetype builder)
 // (headers)
-// (used as a replacement for the stb_truetype builder)
 
 #pragma once
 #include "imgui.h"      // IMGUI_API
@@ -41,7 +40,6 @@ enum ImGuiFreeTypeLoaderFlags_
     ImGuiFreeTypeLoaderFlags_Bitmap        = 1 << 9,   // Enable FreeType bitmap glyphs
 
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
-    // Renamed in 1.92.0 (June 2025)
     ImGuiFreeTypeBuilderFlags_NoHinting     = ImGuiFreeTypeLoaderFlags_NoHinting,
     ImGuiFreeTypeBuilderFlags_NoAutoHint    = ImGuiFreeTypeLoaderFlags_NoAutoHint,
     ImGuiFreeTypeBuilderFlags_ForceAutoHint = ImGuiFreeTypeLoaderFlags_ForceAutoHint,

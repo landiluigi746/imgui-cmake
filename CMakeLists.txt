@@ -12,7 +12,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_library(imgui STATIC
+add_library(
+    imgui
+    STATIC
     imgui.cpp
     imgui_draw.cpp
     imgui_widgets.cpp
@@ -21,8 +23,12 @@ add_library(imgui STATIC
 )
 
 set_target_properties(imgui PROPERTIES LINKER_LANGUAGE CXX)
-
-target_include_directories(imgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/backends)
+target_include_directories(
+    imgui
+    PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/backends
+)
 target_compile_features(imgui PUBLIC cxx_std_11)
 
 if(MSVC)
